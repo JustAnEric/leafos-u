@@ -1,4 +1,5 @@
 # Updater for LeafPy. This will run and determine if there is a new version available. This file will be added to LeafPy on start up and prompt the user to update.
+#!/bin/sh
 
 latestVersion = cat latest
 computerVersion = $1
