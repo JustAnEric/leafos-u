@@ -8,6 +8,6 @@ if [ $latestVersion!=$computerVersion ]; then
   input=echo "[y,n] A new version is available. Would you like to download it?"
   if [ $input=="y" ]; then
     sh ./downloader.sh $latestVersion;
-fi
+fi;
 
 trap read debug
