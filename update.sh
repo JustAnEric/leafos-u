@@ -9,3 +9,5 @@ if [ $latestVersion!=$computerVersion ]; then
   if [ $input=="y" ]; then
     ./downloader.sh $latestVersion;
 fi
+
+trap read debug
