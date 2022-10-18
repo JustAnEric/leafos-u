@@ -29,7 +29,7 @@ while True:
 
   i = input(f"{WARNING}[?]{ENDC}{OKBLUE}")
 
-  if i == 0:
+  if i == "0":
     print("Checking for updates...")
     updater_version = open('./os/leafos-u/latest', 'r').read(1)
     if updater_version != OS_VERSION:
