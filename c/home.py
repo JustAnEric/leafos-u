@@ -47,6 +47,7 @@ while on == True:
         time.sleep(3)
         os.system('clear')
         reloadAgent()
+        on = False
 
     if updater_version == OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
