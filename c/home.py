@@ -14,7 +14,8 @@ OS_VERSION = "19.0.0"
 OS_BUILD = "1.2"
 
 os.system('clear')
-while True:
+on = True
+while on == True:
   time.sleep(2)
   print(OKGREEN+"Home"+ENDC)
   print(f"""
@@ -31,7 +32,7 @@ while True:
 
   if i == "0":
     print("Checking for updates...")
-    updater_version = open('./os/leafos-u/latest', 'r').read(1)
+    updater_version = open('./os/leafos-u/latest', 'r').read(0)
     if updater_version != OS_VERSION:
       print(f"An update is {OKGREEN}available{ENDC}. Would you like to update {WARNING}now?{ENDC}")
       if input(f'{WARNING}[?]{ENDC}{OKBLUE}') == "y":
@@ -47,3 +48,13 @@ while True:
 
     if updater_version == OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
+      
+  elif i == "1":
+    print(f"{OKGREEN}Turned off.{ENDC}")
+    on = False
+    
+  elif i == "2":
+    print(f"{OKGREEN}Killed all tasks.{ENDC}")
+  
+  elif i == "3":
+    print(f"{FAIL}Unknown application.{ENDC}")
