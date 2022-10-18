@@ -22,3 +22,5 @@ print(f"""
 {OKBLUE}[5]{ENDC} BIOS
 {OKBLUE}[6]{ENDC} Reboot
 """)
+
+i = input(f"{WARNING}[?]{ENDC}{OKBLUE}")
