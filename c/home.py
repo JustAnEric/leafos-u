@@ -43,6 +43,7 @@ while True:
           
         print(f"{OKGREEN}Finished update. OS will reboot in a few seconds.{ENDC}")
         time.sleep(3)
+        os.system('clear')
 
     if updater_version == OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
