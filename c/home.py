@@ -28,6 +28,7 @@ while on == True:
   {OKBLUE}[4]{ENDC} Apps
   {OKBLUE}[5]{ENDC} BIOS
   {OKBLUE}[6]{ENDC} Reboot
+  {OKBLUE}[7]{ENDC} Reset Device
   """)
 
   i = input(f"{WARNING}[?]{ENDC}{OKBLUE}")
@@ -78,4 +79,10 @@ while on == True:
     print(f"{OKBLUE} Are you sure you want to reset your device? This action is unreversible. {ENDC}")
     if input(f"{WARNING}[?]{ENDC}{OKBLUE}") == "y":
       print(f"{WARNING}Resetting your device...{ENDC}")
-    
+      tasks = ["rm ./os/functions/home.py", "rm ./os/functions/bios.py", "rm ./os/user/root.data", "rm ./os/user/username.data", "rm ./os/user/setup.data", "rmdir ./os/user/Applications", "rmdir ./os/user/OS", "rmdir ./os/user/Desktop", "rmdir ./os/user/Downloads", "rmdir ./os/user/Library"]
+      for command in tasks:
+        try:
+          os.system(command)
+        except: print("Error on resetting device.")
+      
+      on = False
