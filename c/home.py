@@ -1,6 +1,7 @@
 import os,time
 from reload import reloadAgent
-from bios import start
+try: from bios import start
+except: pass
 
 HEADER = '\033[95m'
 OKBLUE = '\033[94m'
