@@ -1,0 +1,3 @@
+leafxt v1
+spf=kernel?v1-304?find=calc()?*.@=extmgr.lfapp
+?usr/bin/local/kernel?append(auto#)%
