@@ -1,5 +1,6 @@
 import os,time
 from reload import reloadAgent
+from bios import start
 
 HEADER = '\033[95m'
 OKBLUE = '\033[94m'
