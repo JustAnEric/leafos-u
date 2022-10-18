@@ -101,5 +101,5 @@ while on == True:
         try:
           os.system(command)
         except: print("Error on resetting device.")
-      
+      print(f"{OKBLUE}Finished resetting your device successfully.{ENDC}")
       on = False
