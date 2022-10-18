@@ -80,7 +80,23 @@ while on == True:
     print(f"{OKBLUE} Are you sure you want to reset your device? This action is unreversible. {ENDC}")
     if input(f"{WARNING}[?]{ENDC}{OKBLUE}") == "y":
       print(f"{WARNING}Resetting your device...{ENDC}")
-      tasks = ["rm ./os/functions/home.py", "rm ./os/functions/bios.py", "rm ./os/user/root.data", "rm ./os/user/username.data", "rm ./os/user/setup.data", "rmdir ./os/user/Applications", "rmdir ./os/user/OS", "rmdir ./os/user/Desktop", "rmdir ./os/user/Downloads", "rmdir ./os/user/Library"]
+      tasks = [
+        "rm ./os/functions/home.py", 
+        "rm ./os/functions/bios.py", 
+        "rm ./os/user/root.data", 
+        "rm ./os/user/username.data", 
+        "rm ./os/user/setup.data", 
+        "rm ./os/user/Applications/*",
+        "rmdir ./os/user/Applications", 
+        "rm ./os/user/OS/*",
+        "rmdir ./os/user/OS",
+        "rm ./os/user/Desktop/*",
+        "rmdir ./os/user/Desktop", 
+        "rm ./os/user/Downloads/*",
+        "rmdir ./os/user/Downloads", 
+        "rm ./os/user/Library/*",
+        "rmdir ./os/user/Library"
+      ]
       for command in tasks:
         try:
           os.system(command)
