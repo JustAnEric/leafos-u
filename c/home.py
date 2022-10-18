@@ -1,4 +1,5 @@
 import os,time
+from reload import reloadAgent
 
 HEADER = '\033[95m'
 OKBLUE = '\033[94m'
@@ -45,6 +46,7 @@ while on == True:
         print(f"{OKGREEN}Finished update. OS will reboot in a few seconds.{ENDC}")
         time.sleep(3)
         os.system('clear')
+        reloadAgent()
 
     if updater_version == OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
@@ -58,3 +60,14 @@ while on == True:
   
   elif i == "3":
     print(f"{FAIL}Unknown application.{ENDC}")
+  
+  elif i == "4":
+    print(f"{FAIL}Unknown application.{ENDC}")
+    
+  elif i == "5":
+    print(f"{FAIL}Unknown application.{ENDC}")
+    
+  elif i == "6":
+    print(f"{OKGREEN}Rebooting..{ENDC}")
+    reloadAgent()
+    on = False
