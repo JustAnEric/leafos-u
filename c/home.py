@@ -73,3 +73,9 @@ while on == True:
     print(f"{OKGREEN}Rebooting..{ENDC}")
     on = False
     reloadAgent()
+  
+  elif i == "7":
+    print(f"{OKBLUE} Are you sure you want to reset your device? This action is unreversible. {ENDC}")
+    if input(f"{WARNING}[?]{ENDC}{OKBLUE}") == "y":
+      print(f"{WARNING}Resetting your device...{ENDC}")
+    
