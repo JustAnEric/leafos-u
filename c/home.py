@@ -35,8 +35,14 @@ while True:
     if updater_version != OS_VERSION:
       print(f"An update is {OKGREEN}available{ENDC}. Would you like to update {WARNING}now?{ENDC}")
       if input(f'{WARNING}[?]{ENDC}{OKBLUE}') == "y":
-        with open("./os/leafos-u/") as f: open("./os/leafos-u/")
+        with open("./os/leafos-u/c/home.py", "r") as f: 
+          homeMediaCode = f.read()
+        
+        with open("./os/functions/home.py", "w") as f:
+          f.writelines(homeMediaCode)
+          
+        print(f"{OKGREEN}Finished update. OS will reboot in a few seconds.{ENDC}")
+        time.sleep(3)
 
     if updater_version == OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
-      os.system('clear')
