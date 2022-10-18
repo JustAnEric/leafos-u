@@ -46,8 +46,8 @@ while on == True:
         print(f"{OKGREEN}Finished update. OS will reboot in a few seconds.{ENDC}")
         time.sleep(3)
         os.system('clear')
-        reloadAgent()
         on = False
+        reloadAgent()
 
     if updater_version == OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
@@ -70,5 +70,5 @@ while on == True:
     
   elif i == "6":
     print(f"{OKGREEN}Rebooting..{ENDC}")
-    reloadAgent()
     on = False
+    reloadAgent()
