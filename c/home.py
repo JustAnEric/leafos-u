@@ -38,7 +38,7 @@ while on == True:
   if i == "0":
     print("Checking for updates...")
     updater_version = open('./os/leafos-u/latest', 'r').read()
-    if updater_version != OS_VERSION or OS_VERSION not in updater_version:
+    if OS_VERSION not in updater_version:
       print(f"An update is {OKGREEN}available{ENDC}. Would you like to update {WARNING}now?{ENDC}")
       if input(f'{WARNING}[?]{ENDC}{OKBLUE}') == "y":
         with open("./os/leafos-u/c/home.py", "r") as f: 
