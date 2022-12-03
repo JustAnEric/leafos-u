@@ -81,27 +81,16 @@ while on == True:
     if input(f"{WARNING}[?]{ENDC}{OKBLUE}") == "y":
       print(f"{WARNING}Resetting your device...{ENDC}")
       tasks = [
-        "rm ./os/functions/home.py", 
-        "rm ./os/functions/bios.py", 
-        "rm ./os/user/root.data", 
-        "rm ./os/user/username.data", 
-        "rm ./os/user/setup.data", 
-        "rm ./os/user/Applications/*",
-        "rmdir ./os/user/Applications", 
-        "rm ./os/user/OS/*",
-        "rmdir ./os/user/OS",
-        "rm ./os/user/Desktop/*",
-        "rmdir ./os/user/Desktop", 
-        "rm ./os/user/Downloads/*",
-        "rmdir ./os/user/Downloads", 
-        "rm ./os/user/Library/*",
-        "rm ./os/user/Library/python-3.8/*",
-        "rmdir ./os/user/Library/python-3.8/",
-        "rmdir ./os/user/Library"
+        shutil.rmtree("/os/user/Applications"),
+        shutil.rmtree("/os/user/Desktop"),
+        shutil.rmtree("/os/user/Library"),
+        shutil.rmtree("/os/user/Downloads"),
+        shutil.rmtree("/os/user/OS"),
+        os.remove("/os/user/root.data"),
+        os.remove("/os/user/username.data"),
+        os.remove("/os/user/setup.data")
       ]
-      for command in tasks:
-        try:
-          os.system(command)
-        except: print("Error on resetting device.")
+      
       print(f"{OKBLUE}Finished resetting your device successfully.{ENDC}")
+      os.system('python /os/leafos.py &')
       on = False
