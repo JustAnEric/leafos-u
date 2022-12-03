@@ -28,4 +28,11 @@ APPS = [
 ]
 
 def open_filemanager():
-  print()
+  os.system("clear")
+  filel = []
+  path = "./os/"
+  for file in os.listdir(path):
+    filel.append(file)
+  count = 0
+  for line in filel:
+    print(f"")
