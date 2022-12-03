@@ -16,17 +16,6 @@ global open_timerapp
 global open_calcapp
 global open_coinflip
 
-A0 = open_filemanager
-A1 = open_musicapp
-A2 = open_timerapp
-A3 = open_calcapp
-A4 = open_coinflip
-
-# importable from home.py and bios.py
-apps = [
-  A0, A1, A2, A3, A4
-]
-
 def open_filemanager():
   Open = True
   while Open:
@@ -45,3 +34,19 @@ def open_filemanager():
         path = filel[i]
       else: print("The thing you selected was a file. Open it in a file to edit and view.")
     else: print("No such file or directory.")
+      
+def open_musicapp(): return None
+def open_timerapp(): return None
+def open_calcapp(): return None
+def open_coinflip(): return None
+
+A0 = open_filemanager
+A1 = open_musicapp
+A2 = open_timerapp
+A3 = open_calcapp
+A4 = open_coinflip
+
+# importable from home.py and bios.py
+apps = [
+  A0, A1, A2, A3, A4
+]
