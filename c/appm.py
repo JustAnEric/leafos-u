@@ -18,10 +18,10 @@ global open_coinflip
 
 def open_filemanager():
   Open = True
+  path = "./os/"
   while Open:
     os.system("clear")
     filel = []
-    path = "./os/"
     for file in os.listdir(path):
       filel.append(file)
     count = 0
