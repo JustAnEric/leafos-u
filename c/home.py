@@ -80,24 +80,22 @@ while on == True:
     print(f"{OKBLUE} Are you sure you want to reset your device? This action is unreversible. {ENDC}")
     if input(f"{WARNING}[?]{ENDC}{OKBLUE}") == "y":
       print(f"{WARNING}Resetting your device...{ENDC}")
-      tasks = [
-        shutil.rmtree(".../os/user/Applications"),
-        time.sleep(2),
-        shutil.rmtree(".../os/user/Desktop"),
-        time.sleep(2),
-        shutil.rmtree(".../os/user/Library"),
-        time.sleep(2),
-        shutil.rmtree(".../os/user/Downloads"),
-        time.sleep(2),
-        shutil.rmtree(".../os/user/OS"),
-        time.sleep(2),
-        os.remove(".../os/user/root.data"),
-        time.sleep(2),
-        os.remove(".../os/user/username.data"),
-        time.sleep(2),
-        os.remove(".../os/user/setup.data"),
-        time.sleep(2)
-      ]
+      shutil.rmtree("./os/user/Applications")
+      time.sleep(2)
+      shutil.rmtree(".../os/user/Desktop")
+      time.sleep(2)
+      shutil.rmtree(".../os/user/Library")
+      time.sleep(2)
+      shutil.rmtree(".../os/user/Downloads")
+      time.sleep(2)
+      shutil.rmtree(".../os/user/OS")
+      time.sleep(2)
+      os.remove(".../os/user/root.data")
+      time.sleep(2)
+      os.remove(".../os/user/username.data")
+      time.sleep(2)
+      os.remove(".../os/user/setup.data")
+      time.sleep(2)
       
       print(f"{OKBLUE}Finished resetting your device successfully.{ENDC}")
       os.system('python /os/leafos.py &')
