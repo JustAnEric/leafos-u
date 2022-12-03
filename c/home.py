@@ -67,7 +67,8 @@ while on == True:
     print(f"{FAIL}Unknown application.{ENDC}")
   
   elif i == "4":
-    print(f"{FAIL}Unknown application.{ENDC}")
+    print("Opening File Manager...")
+    APPS[0]()
     
   elif i == "5":
     print(f"{FAIL}Unknown application.{ENDC}")
