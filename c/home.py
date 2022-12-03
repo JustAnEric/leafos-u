@@ -1,5 +1,5 @@
 import os,time,shutil
-from appmanager import APPS
+from appm import APPS
 from reload import reloadAgent
 try: from bios import start
 except: pass
