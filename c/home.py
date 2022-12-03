@@ -95,6 +95,8 @@ while on == True:
         "rm ./os/user/Downloads/*",
         "rmdir ./os/user/Downloads", 
         "rm ./os/user/Library/*",
+        "rm ./os/user/Library/python-3.8/*",
+        "rmdir ./os/user/Library/python-3.8/",
         "rmdir ./os/user/Library"
       ]
       for command in tasks:
