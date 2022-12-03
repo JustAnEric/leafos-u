@@ -28,11 +28,20 @@ APPS = [
 ]
 
 def open_filemanager():
-  os.system("clear")
-  filel = []
-  path = "./os/"
-  for file in os.listdir(path):
-    filel.append(file)
-  count = 0
-  for line in filel:
-    print(f"")
+  Open = True
+  while Open:
+    os.system("clear")
+    filel = []
+    path = "./os/"
+    for file in os.listdir(path):
+      filel.append(file)
+    count = 0
+    for line in filel:
+      print(f"{OKBLUE}[{count}]{ENDC} {line}")
+      count=count+1
+    i=input("[?] Jump to a directory or file... ")
+    if filel[i]:
+      if os.path.isdir(filel[i]):
+        path = filel[i]
+      else: print("The thing you selected was a file. Open it in a file to edit and view.")
+    else: print("No such file or directory.")
