@@ -53,7 +53,7 @@ while on == True:
         on = False
         reloadAgent()
 
-    if updater_version == OS_VERSION:
+    if updater_version in OS_VERSION:
       print(f"No updates were {FAIL}available{ENDC}.")
       
   elif i == "1":
