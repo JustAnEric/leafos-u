@@ -10,6 +10,12 @@ ENDC = '\033[0m'
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
 
+global open_filemanager
+global open_musicapp
+global open_timerapp
+global open_calcapp
+global open_coinflip
+
 A0 = open_filemanager
 A1 = open_musicapp
 A2 = open_timerapp
