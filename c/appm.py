@@ -32,9 +32,13 @@ def open_filemanager():
     i2 = int(i)
     if filel[i2]:
       if os.path.isdir(filel[i2]):
-        path = filel[i2]
-      else: print("The thing you selected was a file. Open it in a file to edit and view.")
-    else: print("No such file or directory.")
+        return path = filel[i2]
+      else: 
+        print("The thing you selected was a file. Open it in a file to edit and view.")
+        time.sleep(5)
+    else: 
+      print("No such file or directory.")
+      time.sleep(5)
       
 def open_musicapp(): return None
 def open_timerapp(): return None
