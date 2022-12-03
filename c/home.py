@@ -81,14 +81,14 @@ while on == True:
     if input(f"{WARNING}[?]{ENDC}{OKBLUE}") == "y":
       print(f"{WARNING}Resetting your device...{ENDC}")
       tasks = [
-        shutil.rmtree("/os/user/Applications"),
-        shutil.rmtree("/os/user/Desktop"),
-        shutil.rmtree("/os/user/Library"),
-        shutil.rmtree("/os/user/Downloads"),
-        shutil.rmtree("/os/user/OS"),
-        os.remove("/os/user/root.data"),
-        os.remove("/os/user/username.data"),
-        os.remove("/os/user/setup.data")
+        shutil.rmtree("./os/user/Applications"),
+        shutil.rmtree("./os/user/Desktop"),
+        shutil.rmtree("./os/user/Library"),
+        shutil.rmtree("./os/user/Downloads"),
+        shutil.rmtree("./os/user/OS"),
+        os.remove("./os/user/root.data"),
+        os.remove("./os/user/username.data"),
+        os.remove("./os/user/setup.data")
       ]
       
       print(f"{OKBLUE}Finished resetting your device successfully.{ENDC}")
